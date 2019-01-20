@@ -1,9 +1,9 @@
 import logging
-
 import azure.functions as func
+import json
 
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
@@ -16,7 +16,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             name = req_body.get('name')
 
     if name:
-        return func.HttpResponse(f"Hello {name}!")
+        # find public attributes for context = ABC
+        attrlist = [attr for attr in dir(context) if not attr.startswith('_')]
+        info = {}
+        for attr in attrlist:
+            info[attr] = getattr(context, attr)
+        dump = json.dumps(info, indent=2, default=lambda o: repr(o))
+        return func.HttpResponse(f"{context.function_name} says: Hello {name}!\nContext:\n{dump}")
     else:
         return func.HttpResponse(
              "Please pass a name on the query string or in the request body",
