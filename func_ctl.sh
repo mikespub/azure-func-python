@@ -16,12 +16,16 @@ case "$1" in
 	;;
 	edit)
 	;;
+	test)
+		pytest
+		deactivate
+	;;
 	publish)
 		func azure functionapp publish mikesfunc1
 		deactivate
 	;;
 	*)
-		echo "Usage: $0 {start|edit|publish|new}"
+		echo "Usage: $0 {start|edit|publish|new|test}"
 		exit 1
 	;;
 esac
