@@ -1,5 +1,5 @@
 azure-functions==1.0.0b4
-azure-functions-worker==1.0.0b6
+azure-functions-worker==1.0.0b11
 grpcio==1.23.0
 grpcio-tools==1.23.0
 #pkg-resources==0.0.0
