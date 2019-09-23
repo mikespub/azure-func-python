@@ -1,6 +1,7 @@
 import unittest
 import azure.functions as func
-import azure.functions_worker.bindings as bindings
+#import azure.functions_worker.bindings as bindings
+import azure_functions_worker.bindings as bindings
 from . import main
 
 
