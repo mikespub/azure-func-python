@@ -1,4 +1,4 @@
-azure-functions==1.0.5
+azure-functions==1.0.7
 azure-functions-worker==1.0.1
 #grpcio==1.25.0
 #grpcio-tools==1.25.0
