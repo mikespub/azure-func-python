@@ -6,4 +6,4 @@ azure-functions-worker==1.0.2
 #protobuf==3.10.0
 #six==1.13.0
 requests==2.22.0
-azure-appconfiguration==1.0.0b6
+azure-appconfiguration==1.0.0
