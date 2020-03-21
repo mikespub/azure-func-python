@@ -1,9 +1,9 @@
-azure-functions==1.0.7
-azure-functions-worker==1.0.2
+azure-functions==1.2.0
+azure-functions-worker==1.1.0
 #grpcio==1.25.0
 #grpcio-tools==1.25.0
 #pkg-resources==0.0.0
 #protobuf==3.10.0
 #six==1.13.0
-requests==2.22.0
+requests==2.23.0
 azure-appconfiguration==1.0.0
