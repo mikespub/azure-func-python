@@ -13,10 +13,16 @@ class TestFunction(unittest.TestCase):
             body=None,
             url='/HttpTrigger', 
             params={'name': 'Test'})
+        trace = bindings.TraceContext(
+            'parent',
+            'state',
+            {}
+        )
         context = bindings.Context(
             'test_name',
             'HttpTrigger',
-            '123'
+            '123',
+            trace
         )
 
         # Call the function.

@@ -20,6 +20,9 @@ def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
         attrlist = [attr for attr in dir(context) if not attr.startswith('_')]
         info = {}
         for attr in attrlist:
+            if attr == 'trace_context':
+                # info[attr] = getattr(context, attr).__dict__
+                continue
             info[attr] = getattr(context, attr)
         dump = json.dumps(info, indent=2, default=lambda o: repr(o))
         return func.HttpResponse(f"{context.function_name} says: Hello {name}!\nContext:\n{dump}")
