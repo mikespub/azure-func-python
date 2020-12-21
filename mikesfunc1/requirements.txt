@@ -5,5 +5,5 @@ azure-functions-worker==1.1.9
 #pkg-resources==0.0.0
 #protobuf==3.13.0
 #six==1.15.0
-requests==2.25.0
+requests==2.25.1
 azure-appconfiguration==1.1.1
