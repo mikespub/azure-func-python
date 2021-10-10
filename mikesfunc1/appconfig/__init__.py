@@ -41,7 +41,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     if label:
         if key:
             config_settings = client.list_configuration_settings(
-                labels=[label], keys=[key]
+                label_filter=label, key_filter=key
             )
             items = []
             # find public attributes for ConfigurationSetting = Model
@@ -59,7 +59,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                 items.append(info)
             dump = json.dumps(items, indent=2, default=lambda o: repr(o))
             return func.HttpResponse(f"Label: {label}\nKey: {key}\nAttributes:\n{dump}")
-        config_settings = client.list_configuration_settings(labels=[label])
+        config_settings = client.list_configuration_settings(label_filter=label)
         items = []
         for item in config_settings:
             items.append(item.key)
