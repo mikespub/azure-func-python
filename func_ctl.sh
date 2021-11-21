@@ -1,6 +1,6 @@
 #!/bin/bash
-#python3.6 -m venv .env
-source .env/bin/activate
+#python3 -m venv venv
+source venv/bin/activate
 #func init mikesfunc1
 cd mikesfunc1
 
@@ -31,7 +31,7 @@ case "$1" in
 
 	;;
 	test)
-		pytest
+		python -m pytest
 		deactivate
 	;;
 	publish)
