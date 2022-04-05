@@ -20,7 +20,7 @@ class TestFunction(unittest.TestCase):
         # print(resp.get_body())
 
         # Check the output.
-        self.assertEqual(
-            resp.get_body(),
+        self.assertIn(
             b'test_name says: Hello Test!\nContext:\n{\n  "function_directory": "HttpTrigger",\n  "function_name": "test_name",\n  "invocation_id": "123"\n}',
+            resp.get_body(),
         )
