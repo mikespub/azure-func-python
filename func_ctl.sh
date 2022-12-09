@@ -16,6 +16,9 @@ case "$1" in
 	;;
 	edit)
 	;;
+	list)
+		func azure functionapp list-functions mikesfunc1 --show-keys
+	;;
 	docs)
 		cd ..
 		wget https://github.com/Azure/azure-functions-python-worker/raw/dev/README.md -O README.in
@@ -39,7 +42,7 @@ case "$1" in
 		deactivate
 	;;
 	*)
-		echo "Usage: $0 {start|edit|publish|new|test|docs}"
+		echo "Usage: $0 {start|edit|publish|new|test|docs|list}"
 		exit 1
 	;;
 esac
