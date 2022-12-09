@@ -1,0 +1,16 @@
+local.settings.json
+
+# Local development files
+.gitignore
+.vscode/
+host.json
+Dockerfile
+
+# Local python packages
+.python_packages/
+.pytest_cache/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
