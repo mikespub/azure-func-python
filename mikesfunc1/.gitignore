@@ -23,6 +23,7 @@ appsettings.json
 local.settings.json
 
 node_modules
+dist
 
 # Local python packages
 .python_packages/
@@ -40,3 +41,8 @@ venv.bak/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Azurite artifacts
+__blobstorage__
+__queuestorage__
+__azurite_db*__.json
