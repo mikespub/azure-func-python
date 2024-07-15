@@ -34,6 +34,8 @@ case "$1" in
 
 	;;
 	test)
+		# update http test with context from azure functions python library
+		#wget https://github.com/Azure/azure-functions-python-library/raw/dev/tests/test_http_wsgi.py -O HttpTrigger/test_http_wsgi.py
 		python -m pytest
 		deactivate
 	;;
